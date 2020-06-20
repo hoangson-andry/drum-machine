@@ -165,7 +165,6 @@ export default class App extends Component {
             <i className="fas fa-volume-down"></i>
             <span> Volume</span>
             <span className="drum-control-volumn-value">
-              {" "}
               {this.state.volumeValue}
             </span>
             <input type="range" style={volumeHandlerStyle} />
@@ -175,11 +174,7 @@ export default class App extends Component {
               {this.state.bankIndex ? "Smooth Piano Kit" : "Heater Kit"}
             </div>
             <label className="switch" title="Switch bank">
-              <input
-                type="checkbox"
-                onChange={this.onBankChanged}
-                ref={this.switchBank}
-              />
+              <input type="checkbox" ref={this.switchBank} />
               <span className="slider round" ref={this.switchBankLabel}></span>
             </label>
           </div>

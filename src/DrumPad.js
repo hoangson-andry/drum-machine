@@ -6,42 +6,9 @@ export default class DrumPad extends Component {
     super(props);
 
     this.audioHandler = React.createRef();
-    this.onDrumPadClicked = this.onDrumPadClicked.bind(this);
-    this.onKeyDown = this.onKeyDown.bind(this);
-    this.onKeyUp = this.onKeyUp.bind(this);
   }
 
-  onDrumPadClicked() {
-    const text = this.props.padItem.id.replace(/-/g, " ");
-    const audioElm = this.audioHandler.current;
-
-    this.props.updateDisplayText(text);
-    audioElm.currentTime = 0;
-    audioElm.play();
-  }
-
-  onKeyDown(event) {
-    const root = ReactDOM.findDOMNode(this);
-
-    if (event.keyCode === this.props.padItem.keyCode) {
-      root.classList.add("active");
-      this.onDrumPadClicked();
-    }
-  }
-
-  onKeyUp(event) {
-    const root = ReactDOM.findDOMNode(this);
-
-    if (event.keyCode === this.props.padItem.keyCode) {
-      setTimeout(() => {
-        root.classList.remove("active");
-      }, 33);
-    }
-  }
-
-  componentDidUpdate() {
-    this.audioHandler.current.volume = this.props.volumeValue / 100;
-  }
+  componentDidUpdate() {}
 
   componentDidMount() {}
 
