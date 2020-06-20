@@ -182,14 +182,7 @@ export default class App extends Component {
 
         <div className="drum-pads">
           {banks[this.state.bankIndex].map((item, idx) => {
-            return (
-              <DrumPad
-                key={idx}
-                padItem={item}
-                updateDisplayText={this.updateDisplayText}
-                volumeValue={this.state.volumeValue}
-              />
-            );
+            return <DrumPad key={idx} padItem={item} />;
           })}
         </div>
 
