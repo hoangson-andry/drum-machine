@@ -87,15 +87,6 @@ export default class App extends Component {
         <div className="drum-footer">
           Made by <a href="http://about.phamvanlam.com"></a>.
         </div>
-
-        <FolkMe
-          targetURL="https://github.com/completejavascript/drum-machine"
-          color="#fff"
-          backgroundColor="#35cac5"
-          position="right"
-          size="100px"
-          ariaLabel="View source on Github"
-        />
       </div>
     );
   }
